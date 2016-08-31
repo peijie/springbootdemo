@@ -19,5 +19,6 @@
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="lib" path="C:/Users/peijie/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-commons/1.1.1.RELEASE/a300deb76afea8236aa33eccdfa7c185780b064f/spring-cloud-commons-1.1.1.RELEASE.jar" sourcepath="C:/Users/peijie/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-commons/1.1.1.RELEASE/4e441bd441dcb464905637ae954d13961530f70b/spring-cloud-commons-1.1.1.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/peijie/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-netflix-core/1.1.5.RELEASE/7911406f24b34b5302025a0963d6a2acf28f8e58/spring-cloud-netflix-core-1.1.5.RELEASE.jar" sourcepath="C:/Users/peijie/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-netflix-core/1.1.5.RELEASE/4d77d476de6b4a1151e4b5f03ff65519b52c3b2d/spring-cloud-netflix-core-1.1.5.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/peijie/.gradle/caches/modules-2/files-2.1/org.springframework.amqp/spring-rabbit/1.6.1.RELEASE/6fab8aff86d33c15c1cf9ca8f1c533e98feb6236/spring-rabbit-1.6.1.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
