@@ -1,5 +1,0 @@
-package com.mountainwind.lab.clientloadbalancing;
-
-public class ServerConfiguration {
-
-}

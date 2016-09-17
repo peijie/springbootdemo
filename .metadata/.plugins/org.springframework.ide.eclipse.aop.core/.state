@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="product-service"/>
+<aop-project name="ocr-races"/>
+<aop-project name="ocr-participants"/>
+<aop-project name="ocr-web"/>
+<aop-project name="sample-mqservice"/>
+<aop-project name="service-registry"/>
+<aop-project name="client-load-balancing"/>
 <aop-project name="service-with-actuator"/>
+<aop-project name="ocr-eureka"/>
 </aop-reference-model>

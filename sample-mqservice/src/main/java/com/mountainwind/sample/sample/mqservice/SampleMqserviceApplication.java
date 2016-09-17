@@ -37,9 +37,9 @@ public class SampleMqserviceApplication {
 		public RabbitTemplate rabbitTemplate() {
 			RabbitTemplate template = new RabbitTemplate(connectionFactory());
 			//The routing key is set to the name of the queue by the broker for the default exchange.
-			template.setRoutingKey(this.queueName);
+			template.setRoutingKey(queueName);
 			//Where we will synchronously receive messages from
-			template.setQueue(this.queueName);
+			template.setQueue(queueName);
 			return template;
 		}
 
@@ -81,11 +81,11 @@ public class SampleMqserviceApplication {
 	    
 	    
 
-		@Bean
-		// Every queue is bound to the default direct exchange
-		public Queue helloWorldQueue() {
-			return new Queue(this.helloWorldQueueName);
-		}
+//		@Bean
+//		// Every queue is bound to the default direct exchange
+//		public Queue helloWorldQueue() {
+//			return new Queue(this.helloWorldQueueName);
+//		}
 
 		/*
 		@Bean 
