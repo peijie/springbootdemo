@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Document"/>
-<fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter"/>
@@ -33,8 +30,6 @@
 <fullyQualifiedTypeName name="org.springframework.amqp.core.AmqpAdmin"/>
 <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.core.RabbitAdmin"/>
 <fullyQualifiedTypeName name="org.springframework.amqp.rabbit.core.RabbitTemplate"/>
-<fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -55,4 +50,14 @@
 <fullyQualifiedTypeName name="org.springframework.validation.DataBinder"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
 </qualifiedTypeNameHistroy>
