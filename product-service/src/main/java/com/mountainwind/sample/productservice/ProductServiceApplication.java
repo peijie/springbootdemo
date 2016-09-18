@@ -1,7 +1,5 @@
 package com.mountainwind.sample.productservice;
 
-import java.util.UUID;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -78,6 +76,23 @@ public class ProductServiceApplication implements CommandLineRunner {
 		product4.setLongDescription("In this book about writing books, Dan will show you how to write a book.");
 		product4.setInventoryId("009178461");
 		product4.setCompany(company2);
+		
+		ProductDetail product5 = new ProductDetail();
+		product5.setProductId("product5");
+		product5.setProductName("Dan's Book of Writing");
+		product5.setShortDescription("A book about writing books.");
+		product5.setLongDescription("In this book about writing books, Dan will show you how to write a book.");
+		product5.setInventoryId("009178461");
+		product5.setCompany(company2);
+		
+		ProductDetail product6 = new ProductDetail();
+		product6.setProductId("product6");
+		product6.setProductName("Dan's Book of Writing");
+		product6.setShortDescription("A book about writing books.");
+		product6.setLongDescription("In this book about writing books, Dan will show you how to write a book.");
+		product6.setInventoryId("009178461");
+		product6.setCompany(company2);
+		
 
 		
 	        
@@ -86,6 +101,8 @@ public class ProductServiceApplication implements CommandLineRunner {
 		repository.save(product2);
 		repository.save(product3);
 		repository.save(product4);
+		repository.save(product5);
+		repository.save(product6);
 		
 		
 		
