@@ -6,9 +6,12 @@
 .project
 .metadata
 .gradle
+gradlew
+gradlew.bat
 bin/
 tmp/
 target/
+gradle
 *.tmp
 *.bak
 *.swp
