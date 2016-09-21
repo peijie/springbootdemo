@@ -1,5 +1,9 @@
 package com.mountainwind.sample.productservice;
 
+import java.io.File;
+
+import org.apache.commons.io.input.Tailer;
+import org.apache.commons.io.input.TailerListener;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -8,6 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ProductServiceApplication implements CommandLineRunner {
+	
+	private static String folder = "D:\\Lab\\Spring\\STS\\product-service\\data\\company-data.txt";
+	
 	
 	@Autowired
 	ProductDetailRepository repository;
@@ -120,6 +127,16 @@ public class ProductServiceApplication implements CommandLineRunner {
 		for(ProductDetail prod: repository.findByCompany_CompanyId("company1")) {
 			System.out.println(prod.getProductId());
 		}
+		
+		
+		
+		TailerListener listener = new FileListener();
+		File file = new File(folder);
+		Tailer tailer = Tailer.create(file, listener, 2000);
+		Thread thread = new Thread(tailer);
+		thread.setDaemon(true);
+		thread.start();
+		
 
 	}
 }
