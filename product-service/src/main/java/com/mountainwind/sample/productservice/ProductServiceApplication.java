@@ -1,6 +1,9 @@
 package com.mountainwind.sample.productservice;
 
 import java.io.File;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.commons.io.input.Tailer;
 import org.apache.commons.io.input.TailerListener;
@@ -8,9 +11,15 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
+@Configuration
+@ComponentScan(basePackages = {"com.mountainwind.sample.productservice"})
+@EnableAutoConfiguration
 public class ProductServiceApplication implements CommandLineRunner {
 	
 	private static String folder = "D:\\Lab\\Spring\\STS\\product-service\\data\\company-data.txt";
@@ -20,9 +29,12 @@ public class ProductServiceApplication implements CommandLineRunner {
 	ProductDetailRepository repository;
 	
 	@Autowired
-	CompanyRepository companyRepository;
+	CompanyService companyService;
 
 	public static void main(String[] args) {
+		
+		
+		
 		SpringApplication.run(ProductServiceApplication.class, args);
 		
 
@@ -47,8 +59,8 @@ public class ProductServiceApplication implements CommandLineRunner {
 		company2.setCompanyEmail("emal@testCompany.com");
 
 		
-		companyRepository.save(company);
-		companyRepository.save(company2);
+		companyService.save(company);
+		companyService.save(company2);
 		
 		ProductDetail detail = new ProductDetail();
 		detail.setProductId("product1");
@@ -130,12 +142,19 @@ public class ProductServiceApplication implements CommandLineRunner {
 		
 		
 		
-		TailerListener listener = new FileListener();
+		FileListener listener = new FileListener();
+		listener.setCompanyService(companyService);
+		
 		File file = new File(folder);
 		Tailer tailer = Tailer.create(file, listener, 2000);
-		Thread thread = new Thread(tailer);
-		thread.setDaemon(true);
-		thread.start();
+		
+//		Tailer tailer = new Tailer(file, listener, 2000);
+//		ExecutorService executor = Executors.newSingleThreadExecutor();
+//		executor.execute(tailer);
+		
+//		Thread thread = new Thread(tailer);
+//		thread.setDaemon(true);
+//		thread.start();
 		
 
 	}

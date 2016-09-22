@@ -1,5 +1,6 @@
 company3,company3,123456,emal@testCompany.com
 company4,company4,123456,emal@testCompany.com
 company5,company5,123456,emal@testCompany.com
-company5,company5,123456,emal@testCompany.com
-
+company6,company6,123456,emal@testCompany.com
+company7,company7,123456,emal@testCompany.com
+company8,company8,123456,emal@testCompany.com
