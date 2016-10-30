@@ -1,0 +1,17 @@
+This demo shows how to use testNG in spring boot applications. The following is the steps:
+
+1. Add two dependencies in build.gradle
+	testCompile('org.testng:testng:6.9.13.6')
+	testCompile('org.assertj:assertj.core')
+
+2. Intellij is not updating the dependency libraries automatically. You need to synchronize the Intellij with gradle by
+    clicking the Refresh All button on Gradle projects
+
+3. Make the test class extends from AbstractTestNGSpringContextTests
+
+4. Remove Annotation "@RunWith(SpringRunner.class)" from the test class
+
+5. Create a resources folder under src/test
+
+6. Create testNG configuration file under the resources folder. The file name can be any name. Usually it is testng.xml
+
