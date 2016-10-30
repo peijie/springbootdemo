@@ -3,18 +3,12 @@ package com.mountainwind.example.spring;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -27,23 +21,16 @@ public class SbtestngApplicationTests extends AbstractTestNGSpringContextTests {
 
 
 	@Autowired
-	TestRestTemplate testRestTemplate;
+	private TestRestTemplate testRestTemplate;
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 
 
 
 	@Test
 	public void contextLoads() {
-//		for(int i = 0; i< 10; i++) {
-//			UserEntity userEntity = new UserEntity();
-//			userEntity.setName("Name" + i);
-//			userEntity.setAddress("Address" + i);
-//			userEntity.setEmail("email" + i + "@email.com");
-//
-//			userRepository.save(userEntity);
-//		}
+
 	}
 
 
